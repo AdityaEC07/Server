@@ -1,0 +1,199 @@
+
+    
+
+
+
+    <%- include('./partial/header') %>
+
+    <h1>hello ji</h1>
+    <p> aa ooo</p>
+    
+    <%- include('./partial/footer') %>
+
+    
+
+
+     
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>  
+        <legend> Get</legend>
+    <form action="/user" method="GET">
+        <label  for="name">    name: </label>
+        <input   name="name" type="text" placeholder=" name" id="name"/>
+        <br>
+        <br>
+
+        <label  for="email">  email</label>
+        <input   name="email" type="email" placeholder="email" id="email"/>
+        <br>
+        <br>
+        <label for="pass">  password:   </label>
+        <input   name="password" id="pass" type="password" placeholder="password"/>
+<br>
+<br>
+     <button type="submit"> chale jao</button>
+    </form>
+</fieldset>
+</body>
+</html>
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>  
+        <legend>  post </legend>
+    <form action="/user" method="POST">
+        <label  for="name">    name: </label>
+        <input   name="name" type="text" placeholder=" name" id="name"/>
+        <br>
+        <br>
+
+        <label  for="email">  email</label>
+        <input   name="email" type="email" placeholder="email" id="email"/>
+        <br>
+        <br>
+        <label for="pass">  password:   </label>
+        <input   name="password" id="pass" type="password" placeholder="password"/>
+<br>
+<br>
+     <button type="submit"> chale jao</button>
+    </form>
+</fieldset>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>  
+<html lang="en">  
+  <head>  
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <link rel="stylesheet" href="/stylesheets/style.css" />  
+    <title>Document</title>  
+  </head>  
+  <body>  
+    <form action="/blog" method="POST">  
+      <label for="username">Name:-</label>  
+      <input name="username" type="text" id="" />  
+  
+      <br />  
+      <br />  
+  
+      <label for="comment">Comment:-</label>  
+      <input name="comment" type="text" id="" />  
+  
+      <br />  
+      <br />  
+  
+      <button type="submit">Add Comment</button>  
+      
+    </form>  
+  </body>  
+</html>
+
+
+
+
+<!DOCTYPE html>  
+<html lang="en">  
+  <head>  
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <link rel="stylesheet" href="/stylesheets/style.css" />  
+    <title>Document</title>  
+  </head>  
+  <body>  
+    <form action="/blog" method="POST">  
+      <label for="username">Name:-</label>  
+      <input name="username" type="text" id="" />  
+  
+      <br />  
+      <br />  
+  
+      <label for="comment">Comment:-</label>  
+      <input name="comment" type="text" id="" />  
+  
+      <br />  
+      <br />  
+  
+      <button type="submit">Add Comment</button>  
+    </form>  
+  </body>  
+</html>
+
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Document</title>  
+</head>  
+<body>  
+    <h1>CRUD</h1>  
+    <% for(let i of comments){ %>  
+        <h2>id: <%= i.id %><h2>  
+        <p>name: <%= i.username %></p>  
+        <p>comment: <%= i.comment %></p>  
+        <a href="/blog/<%=i.id %> "> edit </a>
+   <% } %>  
+</body>  
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ 
+    <fieldset>  
+        <legend>  edit</legend>
+    <form action="/blog/< %=data.id%>?_method=PATCH"  method="POST"  >
+        
+        <input type="text" name="username"  value="<%=data.username  %>" />
+        <br>
+        <br>
+
+        <input type="text" name="comment" value="<%=data.comment%>" />
+        <br>
+        <br>
+        <button> save</button>
+
+
+    </form>
+</fieldset>
+</body>
+</html> -->
